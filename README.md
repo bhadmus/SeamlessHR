@@ -11,6 +11,7 @@
 - [Dependencies](#dependencies)
 - [Guide](#guide)
 - [Execution](#execution)
+- [Pipeline Config](#pipeline#config)
 - [Contact](#contact)
 
 ## Dependencies
@@ -53,6 +54,10 @@ bash non-headless.sh
 to run it with a browser
 
 Either of these would run the entire tests and also generate a report. 
+
+## Pipeline Config
+
+Added to the project is a pipeline config that runs the code in the pipeline. The report is stored as an artefact named `test-report`
 
 ## Contact
 
