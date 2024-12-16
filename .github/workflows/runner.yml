@@ -22,7 +22,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Behave Tests
+      - name: Set up ChromeDriver
+        uses: actions/setup-chromedriver@v2
+
+      - name: Run Assessment Tests
         run: |
           behave -f behave_html_formatter:HTMLFormatter -o reports/report.html
 

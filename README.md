@@ -41,9 +41,18 @@
 You can run all tests locally from your project root using:
 
 ```bash
-behave -f behave_html_formatter:HTMLFormatter -o reports/report.html
+bash headless.sh
 ```
-This would run the entire tests and also generate  a report. 
+to run it headlessly
+
+OR
+
+```bash
+bash non-headless.sh
+```
+to run it with a browser
+
+Either of these would run the entire tests and also generate a report. 
 
 ## Contact
 
