@@ -6,6 +6,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.support.ui import Select
 from selenium import webdriver
 from faker import Faker
+from webconfig import Driver
 from selenium.webdriver.support.wait import WebDriverWait
 
 fake = Faker()
@@ -15,14 +16,15 @@ userDetails = []
 class CommonActions:
 
     def __init__(self):
-        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        self.browse = Driver()
+        self.driver = self.browse.driver
+        self.driver.maximize_window()
         self.action = ActionChains(self.driver)
         self.wait = WebDriverWait(self.driver, 10)
         self.userDetails = []
 
     def launch_page(self, url):
         self.driver.get(url)
-        self.driver.maximize_window()
 
     def click_element(self, element):
         self.wait_for_presence(element)
