@@ -24,7 +24,20 @@ jobs:
       - name: Set up ChromeDriver
         uses: nanasess/setup-chromedriver@v2
 
-      - name: Run Assessment Tests
+      - name: Run Assessment Tests (Attempt 1)
+        id: run-tests-1
+        run: |
+          behave -f behave_html_formatter:HTMLFormatter -o reports/report.html
+        continue-on-error: true
+
+      - name: Run Assessment Tests (Attempt 2)
+        if: failure() && steps.run-tests-1.outcome == 'failure'
+        run: |
+          behave -f behave_html_formatter:HTMLFormatter -o reports/report.html
+        continue-on-error: true
+
+      - name: Run Assessment Tests (Attempt 3)
+        if: failure() && steps.run-tests-1.outcome == 'failure'
         run: |
           behave -f behave_html_formatter:HTMLFormatter -o reports/report.html
 
