@@ -23,7 +23,7 @@
 
 ## Guide
 
-> [!INFO]
+> [!NOTE]
 > 
 > Have Python installed and for best practice install a virtual environment.
 > 
