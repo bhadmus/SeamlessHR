@@ -11,7 +11,7 @@ certifi==2024.8.30
 chardet==5.2.0
 charset-normalizer==3.4.0
 click==8.1.7
-Django==4.2.17
+Django>=4.2.17
 exceptiongroup==1.2.2
 Faker==33.1.0
 Flask==2.2.5
