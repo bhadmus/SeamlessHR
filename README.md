@@ -19,6 +19,7 @@
 ---
 - [ ] [Python](https://www.python.org/downloads/)
 - [ ] [Behave](https://pypi.org/project/behave/)
+- [ ] [Faker](https://pypi.org/project/Faker/)
 - [ ] [Selenium](https://pypi.org/project/selenium/)
 
 
