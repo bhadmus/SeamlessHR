@@ -23,8 +23,6 @@ jobs:
 
       - name: Set up ChromeDriver
         uses: nanasess/setup-chromedriver@v2
-        with:
-          chromedriver-version: 'latest'
 
       - name: Run Assessment Tests
         run: |
