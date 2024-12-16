@@ -1,6 +1,5 @@
 from resources.common_actions import CommonActions
 from data_elements.selectors import Data
-from time import sleep
 
 
 class Registration(CommonActions):
@@ -87,7 +86,6 @@ class Registration(CommonActions):
 
     def click_back_button(self):
         self.click_back()
-        sleep(5)
 
     def verify_funds_transfer_page(self):
         self.wait_for_text_presence(Data.regPageTitle, 'Transfer Funds')
