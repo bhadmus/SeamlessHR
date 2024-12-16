@@ -2,7 +2,6 @@ name: SeamlessHR CLI
 
 on:
   push:
-    branches: [ main ]
 
 jobs:
   test:
@@ -24,10 +23,9 @@ jobs:
 
       - name: Set up ChromeDriver
         uses: nanasess/setup-chromedriver@v2
-        run: |
-              export DISPLAY=:99
-              chromedriver --url-base=/wd/hub &
-              sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
+        with:
+          chrome-version: 'latest'
+          driver-version: 'latest'
 
       - name: Run Assessment Tests
         run: |
