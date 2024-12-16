@@ -5,3 +5,6 @@
 dist/
 reports/
 allure-report/
+__pycache__/
+data_elements/__pycache__/
+resources/__pycache__/
