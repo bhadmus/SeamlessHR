@@ -28,8 +28,7 @@
 > Have Python installed and for best practice install a virtual environment.
 > 
 > You can install virtualenv to create one for instance or whichever way you prefer.
-> 
-> Have allure-commandline is installed. Run `npm install -g allure-commandline` if you haven't.
+
 
 
 - Clone the repository into a desired location
@@ -42,15 +41,9 @@
 You can run all tests locally from your project root using:
 
 ```bash
-behave -f allure_behave.formatter:AllureFormatter -o reports/
-
+behave -f behave_html_formatter:HTMLFormatter -o reports/report.html
 ```
-This would run the entire tests and also generate report. To view the report run `allure serve reports`
-
-```bash
-
-```
-
+This would run the entire tests and also generate  a report. 
 
 ## Contact
 
